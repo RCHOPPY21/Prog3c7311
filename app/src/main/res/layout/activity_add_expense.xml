@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Navy Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:background="@color/navy_dark"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Expense"
+                android:textColor="@color/white"
+                android:textSize="26sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Track a new transaction"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:alpha="0.7"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+
+        <!-- Form Body -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- CATEGORY CARD -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CATEGORY"
+                android:textColor="@color/text_gray"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.15"
+                android:layout_marginBottom="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/white_card"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp">
+
+                <!-- Row 1 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnCatFood"
+                        android:layout_width="0dp"
+                        android:layout_height="44dp"
+                        android:layout_weight="1"
+                        android:text="🛒 Food"
+                        android:textSize="11sp"
+                        android:textColor="@color/text_dark"
+                        android:layout_marginEnd="6dp"
+                        android:background="@drawable/rounded_button_green"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"/>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnCatTransport"
+                        android:layout_width="0dp"
+                        android:layout_height="44dp"
+                        android:layout_weight="1"
+                        android:text="🚌 Transport"
+                        android:textSize="11sp"
+                        android:textColor="@color/text_gray"
+                        android:layout_marginEnd="6dp"
+                        android:background="@drawable/rounded_edittext"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"/>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnCatUtilities"
+                        android:layout_width="0dp"
+                        android:layout_height="44dp"
+                        android:layout_weight="1"
+                        android:text="💡 Utilities"
+                        android:textSize="11sp"
+                        android:textColor="@color/text_gray"
+                        android:background="@drawable/rounded_edittext"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"/>
+                </LinearLayout>
+
+                <!-- Row 2 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnCatEntertain"
+                        android:layout_width="0dp"
+                        android:layout_height="44dp"
+                        android:layout_weight="1"
+                        android:text="🎬 Entertain"
+                        android:textSize="11sp"
+                        android:textColor="@color/text_gray"
+                        android:layout_marginEnd="6dp"
+                        android:background="@drawable/rounded_edittext"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"/>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnCatCustom"
+                        android:layout_width="0dp"
+                        android:layout_height="44dp"
+                        android:layout_weight="1"
+                        android:text="+ Custom"
+                        android:textSize="11sp"
+                        android:textColor="@color/text_gray"
+                        android:layout_marginEnd="6dp"
+                        android:background="@drawable/rounded_edittext"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="44dp"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- DETAILS CARD -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DETAILS"
+                android:textColor="@color/text_gray"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.15"
+                android:layout_marginBottom="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/white_card"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp">
+
+                <!-- Amount -->
+                <EditText
+                    android:id="@+id/etAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:hint="💰  Amount (R)"
+                    android:textColorHint="@color/text_gray"
+                    android:textColor="@color/text_dark"
+                    android:textSize="15sp"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/rounded_edittext"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:layout_marginBottom="10dp"/>
+
+                <!-- Description -->
+                <EditText
+                    android:id="@+id/etDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:hint="📝  Description"
+                    android:textColorHint="@color/text_gray"
+                    android:textColor="@color/text_dark"
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    android:background="@drawable/rounded_edittext"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:layout_marginBottom="10dp"/>
+
+                <!-- Date -->
+                <TextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:hint="📅  Date"
+                    android:textColorHint="@color/text_gray"
+                    android:textColor="@color/text_dark"
+                    android:textSize="15sp"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/rounded_edittext"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:layout_marginBottom="10dp"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+                <!-- Start + End Time side by side -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/tvStartTime"
+                        android:layout_width="0dp"
+                        android:layout_height="52dp"
+                        android:layout_weight="1"
+                        android:hint="🕐 Start"
+                        android:textColorHint="@color/text_gray"
+                        android:textColor="@color/text_dark"
+                        android:textSize="14sp"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/rounded_edittext"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        android:layout_marginEnd="8dp"
+                        android:clickable="true"
+                        android:focusable="true"/>
+
+                    <TextView
+                        android:id="@+id/tvEndTime"
+                        android:layout_width="0dp"
+                        android:layout_height="52dp"
+                        android:layout_weight="1"
+                        android:hint="🕐 End"
+                        android:textColorHint="@color/text_gray"
+                        android:textColor="@color/text_dark"
+                        android:textSize="14sp"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/rounded_edittext"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        android:clickable="true"
+                        android:focusable="true"/>
+                </LinearLayout>
+
+                <!-- Recurring toggle -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/rounded_edittext"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="🔁  Is this recurring?"
+                        android:textColor="@color/text_gray"
+                        android:textSize="15sp"/>
+
+                    <Switch
+                        android:id="@+id/switchRecurring"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:thumbTint="@color/green_accent"
+                        android:trackTint="@color/light_gray"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- PHOTO CARD -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RECEIPT PHOTO (OPTIONAL)"
+                android:textColor="@color/text_gray"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.15"
+                android:layout_marginBottom="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/white_card"
+                android:padding="16dp"
+                android:layout_marginBottom="20dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnAttachPhoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text="📷  Take / Choose Photo"
+                    android:textColor="@color/text_gray"
+                    android:background="@drawable/rounded_edittext"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"/>
+
+                <ImageView
+                    android:id="@+id/ivReceiptPreview"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:scaleType="centerCrop"
+                    android:visibility="gone"
+                    android:layout_marginTop="12dp"
+                    android:contentDescription="Receipt photo preview"/>
+
+                <TextView
+                    android:id="@+id/tvPhotoLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No photo attached"
+                    android:textColor="@color/text_gray"
+                    android:textSize="12sp"
+                    android:layout_marginTop="8dp"/>
+            </LinearLayout>
+
+            <!-- SAVE BUTTON -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSaveExpense"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="Save Expense"
+                android:textColor="@color/text_dark"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:background="@drawable/rounded_button_green"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:layout_marginBottom="32dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

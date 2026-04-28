@@ -334,6 +334,18 @@
                     android:progressTint="@color/green_accent"/>
             </LinearLayout>
 
+            <!-- Add Expense Button -->
+            <Button
+                android:id="@+id/btnGoToAddExpense"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="+ Add Expense"
+                android:textColor="@color/text_dark"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:background="@drawable/rounded_button_green"
+                android:layout_marginBottom="16dp"/>
+
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

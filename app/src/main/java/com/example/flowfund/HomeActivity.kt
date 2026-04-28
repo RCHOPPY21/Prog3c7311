@@ -1,6 +1,8 @@
 package com.example.flowfund
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import java.text.SimpleDateFormat
@@ -16,5 +18,11 @@ class HomeActivity : AppCompatActivity() {
         val tvDate = findViewById<TextView>(R.id.tvDate)
         val dateFormat = SimpleDateFormat("MMMM yyyy", Locale.getDefault())
         tvDate.text = dateFormat.format(Date())
+
+        // Opens the Add Expense screen when the button is tapped
+        val btnGoToAddExpense = findViewById<Button>(R.id.btnGoToAddExpense)
+        btnGoToAddExpense.setOnClickListener {
+            startActivity(Intent(this, AddExpenseActivity::class.java))
+        }
     }
 }
